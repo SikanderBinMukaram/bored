@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFS vs DFS Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BFS vs DFS Pathfinding Visualizer</h1>
+        <div class="controls">
+            <p>Click on the grids to set points:</p>
+            <div class="status">
+                <span id="status-text">1. Click to set START (Green)</span>
+            </div>
+            <button id="btn-reset" onclick="resetGrids()">Reset</button>
+            <button id="btn-run" onclick="runAlgorithms()" disabled>Run Visualization</button>
+        </div>
+
+        <div class="grids-container">
+            <div class="grid-wrapper">
+                <h2>Breadth-First Search (BFS)</h2>
+                <div id="grid-bfs" class="grid"></div>
+                <div class="stats">Steps: <span id="stats-bfs">0</span> | Path: <span id="path-bfs">0</span></div>
+            </div>
+            <div class="grid-wrapper">
+                <h2>Depth-First Search (DFS)</h2>
+                <div id="grid-dfs" class="grid"></div>
+                <div class="stats">Steps: <span id="stats-dfs">0</span> | Path: <span id="path-dfs">0</span></div>
+            </div>
+            <div class="grid-wrapper">
+                <h2>A* Search (Smart)</h2>
+                <div id="grid-astar" class="grid"></div>
+                <div class="stats">Steps: <span id="stats-astar">0</span> | Path: <span id="path-astar">0</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
